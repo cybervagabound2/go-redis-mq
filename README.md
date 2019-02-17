@@ -1,4 +1,4 @@
-# go-redis-mq
+# go-redis-pubsub
 Simple application that implement Publisher/Subcriber pattern using Golang and Redis.
 
 ## Installation
