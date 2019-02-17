@@ -12,7 +12,7 @@ https://golang.org
 - Run redis server:
 `$ redis-server &`
 - In project directory, build application:
-`go build main.go`
+`$ go build main.go`
 - Run application:
 `$ ./main`
 
