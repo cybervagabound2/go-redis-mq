@@ -28,5 +28,5 @@ https://golang.org
 https://asciinema.org/a/QcpbXSM8RPEZ3wtC3AhGLca4r
 ## TODO
 - [x] Setup CI/CD
-- [x] Create tests
+- [ ] Create tests
 - [ ] Create websocket implementation
