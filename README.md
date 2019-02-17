@@ -1,3 +1,4 @@
+[![CircleCI](https://circleci.com/gh/cybervagabound2/go-redis-pubsub/tree/master.svg?style=svg)](https://circleci.com/gh/cybervagabound2/go-redis-pubsub/tree/master)
 # go-redis-pubsub
 Simple application that implement Publisher/Subcriber pattern using Golang and Redis.
 
