@@ -4,13 +4,17 @@ Simple application that implement Publisher/Subcriber pattern using Golang and R
 ## Installation
 
 ### Manual Install
-- You need Golang installed on your machine
+- You need Golang installed on your machine:
 https://golang.org
-- `go get github.com/cybervagabound2/go-redis-mq`
-it will clone repository and install all neccessary dependices
-- start redis server on your machine
-`redis-server &`
-- run application
+- Clone repository (all dependicies will be installed)
+`go get github.com/cybervagabound2/go-redis-mq`
+- Install Redis: https://redis.io/topics/quickstart
+- Run redis server:
+`$ redis-server &`
+- In project directory, build application:
+`go build main.go`
+- Run application:
+`./main`
 
 ### Install vis .sh script
 
