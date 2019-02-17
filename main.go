@@ -16,3 +16,14 @@ type processor struct {
     pool  *redis.Pool
     topic string
 }
+
+// Handling errors
+func (p *processor) forceError() {
+    p.mu.Lock()
+    if p.psc/Conn != nil {
+        p.psc.Conn != nil {
+            p.psc.Conn.Send("QUIT")
+            p.psc.Conn.Flush()
+    }
+    p.mu.Unlock()
+}
