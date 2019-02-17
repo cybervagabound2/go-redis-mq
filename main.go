@@ -56,3 +56,24 @@ main:
     }
 }
 
+func main() {
+    pool := &redis.Pool{Dial: func() (redis.Conn, error) {
+        return redis.Dial("tcp", ":6379")
+    },
+    }
+
+    p := &processor{pool: pool, topic: "topic"}
+    go p.listen()
+
+    c := pool.Get()
+    defer c.Close()
+
+    time.Sleep(time.Second)
+    c.Do("PUBLISH", p.topic, "first message")
+    time.Sleep(time.Second)
+    p.forceError()
+    time.Sleep(time.Second)
+    c.Do("PUBLISH", p.topic, "second message")
+    time.Sleep(time.Second)
+}
+
