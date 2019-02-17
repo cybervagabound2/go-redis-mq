@@ -17,8 +17,8 @@ https://golang.org
 `./main`
 
 ### Install vis .sh script
-`chmod +x install.sh`
-./install.sh
+`chmod +x install.sh`  
+`./install.sh`
 
 ### Install via Docker
 
