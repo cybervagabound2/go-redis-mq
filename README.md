@@ -17,7 +17,7 @@ https://golang.org
 - Run application:
 `$ ./main`
 
-### Install vis .sh script
+### Install via .sh script
 `$ chmod +x install.sh`  
 `$ ./install.sh`
 
