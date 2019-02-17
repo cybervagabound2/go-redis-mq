@@ -27,6 +27,6 @@ https://golang.org
 - running install.sh
 https://asciinema.org/a/QcpbXSM8RPEZ3wtC3AhGLca4r
 ## TODO
-- [ ] Enable Docker support
-- [ ] Setup CI/CD
+- [x] Setup CI/CD
+- [x] Create tests
 - [ ] Create websocket implementation
