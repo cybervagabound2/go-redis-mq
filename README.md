@@ -1,7 +1,9 @@
 # go-redis-mq
 Simple application that implement Publisher/Subcriber pattern using Golang and Redis.
 
-## Installation steps
+## Installation
+
+### Manual Install
 - You need Golang installed on your machine
 https://golang.org
 - `go get github.com/cybervagabound2/go-redis-mq`
@@ -10,5 +12,13 @@ it will clone repository and install all neccessary dependices
 `redis-server &`
 - run application
 
+### Install vis .sh script
+
+### Install via Docker
+
 ## Screencast
-htt
+
+## TODO
+- [ ] Enable Docker support
+- [ ] Setup CI/CD
+- [ ] Create websocket implementation
