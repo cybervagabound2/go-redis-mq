@@ -7,7 +7,7 @@ Simple application that implement Publisher/Subcriber pattern using Golang and R
 - You need Golang installed on your machine:
 https://golang.org
 - Clone repository (all dependicies will be installed)
-`$ go get github.com/cybervagabound2/go-redis-mq`
+`$ go get github.com/cybervagabound2/go-redis-pubsub`
 - Install Redis: https://redis.io/topics/quickstart
 - Run redis server:
 `$ redis-server &`
@@ -23,7 +23,8 @@ https://golang.org
 ### Install via Docker
 
 ## Screencast
-
+- running install.sh
+https://asciinema.org/a/QcpbXSM8RPEZ3wtC3AhGLca4r
 ## TODO
 - [ ] Enable Docker support
 - [ ] Setup CI/CD
