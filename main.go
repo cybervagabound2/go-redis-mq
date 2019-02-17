@@ -5,6 +5,7 @@ import (
     "log"
     "sync"
     "time"
+    "strconv"
 
     "github.com/garyburd/redigo/redis"
 )
@@ -46,7 +47,7 @@ main:
         for {
             switch v := p.psc.Receive().(type) {
             case redis.Message:
-                log.Printf("incoming message %s %s\n", v.Channel, v.Data)
+                log.Printf("incoming message, %s %s\n", v.Channel, v.Data)
             case error:
                 log.Printf("Receive() returned %v", v)
                 continue main
@@ -61,18 +62,22 @@ func main() {
     },
     }
 
-    p := &processor{pool: pool, topic: "topic"}
+    p := &processor{pool: pool, topic: "topic:"}
     go p.listen()
 
     c := pool.Get()
     defer c.Close()
 
-    time.Sleep(time.Second)
-    c.Do("PUBLISH", p.topic, "first message")
-    time.Sleep(time.Second)
+    for i := 0; i < 10; i++ {
+        time.Sleep(time.Second)
+        c.Do("PUBLISH", p.topic, strconv.Itoa(i) + ":( ͡° ͜ʖ ͡°)")
+        time.Sleep(time.Second)
+    }
+    // check that we can force error
     p.forceError()
     time.Sleep(time.Second)
-    c.Do("PUBLISH", p.topic, "second message")
+    // continue messaging
+    c.Do("PUBLISH", p.topic, "Придется применить DDos-атаку")
     time.Sleep(time.Second)
 }
 
